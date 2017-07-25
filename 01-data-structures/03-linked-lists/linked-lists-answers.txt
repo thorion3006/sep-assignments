@@ -17,3 +17,9 @@ Time taken to delete 5000th element of the Linked List:   0.000000   0.000000   
 From the above benchmark we can conclude that the creation time of an array is almost 10 times faster
 than that of a linked list. And when it comes to accessing and deleting an element from the array as to
 linked lists, arrays are 100 times faster.
+
+
+#Added prev variable to node
+I added a third variable to the node to store the location of the previous node. This
+enables us to traverse through the node in both the directions, which helps us to find
+a particular node in the list with the least possible iteration.

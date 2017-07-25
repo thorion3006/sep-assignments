@@ -7,14 +7,26 @@ class LinkedList
 
   # This method creates a new `Node` using `data`, and inserts it at the end of the list.
   def add_to_tail(node)
+#Uncomment and replace with the below code if removing the previous tracker in node
+=begin
     @head ||= node
     @head.next = node if @head.next.nil? && @head != node
     @tail.next = node if @tail
+    @tail = node
+=end
+    @head ||= node
+    @head.next = node if @head.next.nil? && @head != node
+    if @tail
+      node.prev = @tail
+      @tail.next = node
+    end
     @tail = node
   end
 
   # This method removes the last node in the lists and must keep the rest of the list intact.
   def remove_tail
+#Uncomment and replace with the below code if removing the previous tracker in node
+=begin
     if @head == @tail
       @head = nil
       @tail = nil
@@ -28,6 +40,15 @@ class LinkedList
       @tail = temp1
       @tail.next = nil
       @head.next = nil if @head == temp1
+    end
+=end
+    if @head == @tail
+      @head = nil
+      @tail = nil
+    else
+      @tail = @tail.prev
+      @tail.next = nil
+      @head.next = nil if @head == @tail
     end
   end
 
@@ -43,6 +64,8 @@ class LinkedList
 
   # This method removes `node` from the list and must keep the rest of the list intact.
   def delete(node)
+#Uncomment and replace with the below code if removing the previous tracker in node
+=begin
     temp = @head.next
     if @head == node
       @head = temp
@@ -57,6 +80,25 @@ class LinkedList
         end
         prev_temp = temp
         temp = temp.next
+      end
+    end
+=end
+    temp_head = @head.next
+    temp_tail = @tail.prev
+    if @head == node
+      @head = temp_head
+    elsif @tail == node
+      remove_tail
+    else
+      while temp_head.next || temp_tail.prev
+        if temp_head == node
+          temp_head.prev.next = temp_head.next
+          break
+        elsif temp_tail == node
+          temp_tail.prev.next = temp_tail.next
+        end
+        temp_head = temp_head.next
+        temp_tail = temp_tail.prev
       end
     end
   end
