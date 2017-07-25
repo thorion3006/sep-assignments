@@ -14,8 +14,8 @@ class Pixel
     @red = validate_color red
     @green = validate_color green
     @blue = validate_color blue
-    @x = x
-    @y = y
+    @x = x if x > 0
+    @y = y if y > 0
   end
 
   private

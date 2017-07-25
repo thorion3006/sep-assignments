@@ -29,7 +29,7 @@ class Line
   end
 
   def search(person)
-    members.index(person) ? members[members.index(person)] : nil
+    index(person) ? members[members.index(person)] : nil
   end
 
   private

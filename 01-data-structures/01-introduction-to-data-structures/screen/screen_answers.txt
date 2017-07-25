@@ -1,0 +1,6 @@
+1. We can insert pixels into the screen with the insert method, and get the pixel at
+a particular position with the at method.
+
+2. The at method in the Screen class returns the pixel at a given position.
+
+3. This data structure is a single purpose data-structure.

@@ -1,0 +1,6 @@
+1. The join and leave method allow users to add and delete members to the line respectively,
+while the front, back and middle methods returns the member in their respective position.
+
+2. One can use the search method to check if a member exists in the line.
+
+3. This data structure can be used to arrange any type of data in a queue.
