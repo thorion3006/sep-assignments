@@ -1,0 +1,2 @@
+1. Doubling the size of the array wastes memory
+2. It slows down the code rum time as allocating memory takes time 

@@ -16,7 +16,7 @@ RSpec.describe HashClass, type: Class do
   describe "#key" do
     it "returns the sum of the ascii values of the string value" do
       key = "test"
-      expect(lotr_movies.index(key, 6)).to eq 4
+      expect(lotr_movies.index(key, 6)).to eq 0
     end
   end
 
@@ -31,9 +31,10 @@ RSpec.describe HashClass, type: Class do
       movies = HashClass.new(30)
       movies["A New Hope"] = "Average"
       movies["Empire Strikes Back"] = "Excellent"
+      expect(movies.size).to eq 60
       movies["Return of the Jedi"] = "The Best"
       movies.resize
-      expect(movies.size).to eq 60
+      expect(movies.size).to eq 120
       expect(movies["A New Hope"]).to eq "Average"
       expect(movies["Empire Strikes Back"]).to eq "Excellent"
       expect(movies["Return of the Jedi"]).to eq "The Best"
