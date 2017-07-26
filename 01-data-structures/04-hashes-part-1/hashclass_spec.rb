@@ -50,11 +50,20 @@ RSpec.describe HashClass, type: Class do
       expect(hash.size).to eq 1
     end
 
-    it "resizes the array when a collision occurs and the values do not match" do
+    it "updates the value when a collision occurs and the values do not match but the key is the same" do
       hash = HashClass.new(1)
       hash["key"] = "value"
       expect(hash.size).to eq 1
       hash["key"] = "different"
+      expect(hash.size).to eq 1
+      expect(hash["key"]).to eq "different"
+    end
+
+    it "resizes the array when a collision occurs and the values do not match" do
+      hash = HashClass.new(1)
+      hash["key1"] = "value"
+      expect(hash.size).to eq 1
+      hash["key2"] = "different"
       expect(hash.size).to eq 2
     end
 

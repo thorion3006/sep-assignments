@@ -10,9 +10,11 @@ class HashClass
     i = index(key, size)
     if @items[i].nil?
       @items[i] = HashItem.new(key, value)
-    elsif @items[i].value != value
+    elsif @items[i].key != key
       resize
       @items[index(key, size)] = HashItem.new(key, value)
+    elsif @items[i].key == key
+      @items[i].value = value
     end
     puts "Hash size after insertion: #{size}.\n#{@items}"
   end
