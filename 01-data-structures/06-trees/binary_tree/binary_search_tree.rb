@@ -88,32 +88,3 @@ class BinarySearchTree
     end
   end
 end
-
-##############
-def start_tree
-  a = (100..999999).to_a.shuffle
-  tree = nil
-  root = nil
-  insert_time = Benchmark.measure {
-    root = Node.new('1', a.pop)
-    tree = BinarySearchTree.new(root)
-    99999.times do |i|
-      tree.insert(root, Node.new("#{i+2}", a.pop))
-    end
-  }
-  insert100001 = Benchmark.measure {
-    tree.insert(root, Node.new('100001', a.pop))
-  }
-  find50000 = Benchmark.measure {
-    tree.find(root, '50000')
-  }
-  delete50000 = Benchmark.measure {
-    tree.delete(root, '50000')
-  }
-  str = "Time taken to insert 100000 elements to a min heap: #{insert_time}\nTime taken to add 100001th element: #{insert100001}\nTime taken to search for 50000th element: #{find50000}\nTime taken to delete 50000th element: #{delete50000}"
-  puts str
-  open('tree-answers.txt', 'a') { |f|
-    f.puts "\nBinary search tree:"
-    f.puts str
-  }
-end

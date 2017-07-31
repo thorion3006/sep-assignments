@@ -1,5 +1,4 @@
 require_relative 'node'
-require 'benchmark'
 
 class BinaryHeap
 
@@ -123,32 +122,4 @@ class BinaryHeap
       queue.push(root.right) unless root.right.nil? || root.right.title == children
     end
   end
-end
-
-#################################
-def start_heap
-  a = (100..999999).to_a.shuffle
-  tree = nil
-  insert_time = Benchmark.measure {
-    tree = BinaryHeap.new(Node.new('1', a.pop))
-    99999.times do |i|
-      tree.insert(Node.new("#{i+2}", a.pop))
-    end
-  }
-  insert100001 = Benchmark.measure {
-    tree.insert(Node.new('100001', a.pop))
-  }
-  find50000 = Benchmark.measure {
-    tree.find('50000')
-  }
-  delete50000 = Benchmark.measure {
-    tree.delete('50000')
-  }
-  str = "Time taken to insert 100000 elements to a min heap: #{insert_time}\nTime taken to add 100001th element: #{insert100001}\nTime taken to search for 50000th element: #{find50000}\nTime taken to delete 50000th element: #{delete50000}"
-  puts str
-  open('tree-answers.txt', 'a') { |f|
-    f.puts 'Binary min heap:'
-    f.puts str
-  }
-  start_tree
 end

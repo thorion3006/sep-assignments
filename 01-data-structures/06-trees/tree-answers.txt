@@ -1,3 +1,8 @@
+1. Binary heap always fills a level before going to the next level whereas binary tree moves to the next level
+even if only one slot in the previous level is filled. In a binary heap the root is always the lowest/highest element
+depending on the heap property but in a binary tree the root will always be the first element added.
+
+2. Benchmark test:
 Binary min heap:
 Time taken to insert 100000 elements to a min heap: 768.453000   0.000000 768.453000 (769.283029)
 Time taken to add 100001th element:   0.016000   0.000000   0.016000 (  0.017862)
@@ -9,3 +14,8 @@ Time taken to insert 100000 elements to a min heap:   0.328000   0.000000   0.32
 Time taken to add 100001th element:   0.000000   0.000000   0.000000 (  0.000006)
 Time taken to search for 50000th element:   0.000000   0.000000   0.000000 (  0.003928)
 Time taken to delete 50000th element:   0.047000   0.000000   0.047000 (  0.045426)
+
+Binary search tree is used in many search applications where data is constantly entering/leaving, such as the map and
+set objects in many languages' libraries because they allow fast lookup, addition and removal of items.
+
+Binary heaps are a common way of implementing priority queues because the lowest/highest element is always at the top.
