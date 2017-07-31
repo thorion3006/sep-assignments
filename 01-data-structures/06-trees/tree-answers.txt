@@ -1,0 +1,11 @@
+Binary min heap:
+Time taken to insert 100000 elements to a min heap: 768.453000   0.000000 768.453000 (769.283029)
+Time taken to add 100001th element:   0.016000   0.000000   0.016000 (  0.017862)
+Time taken to search for 50000th element:   0.031000   0.000000   0.031000 (  0.033672)
+Time taken to delete 50000th element:   0.047000   0.000000   0.047000 (  0.053743)
+
+Binary search tree:
+Time taken to insert 100000 elements to a min heap:   0.328000   0.000000   0.328000 (  0.320023)
+Time taken to add 100001th element:   0.000000   0.000000   0.000000 (  0.000006)
+Time taken to search for 50000th element:   0.000000   0.000000   0.000000 (  0.003928)
+Time taken to delete 50000th element:   0.047000   0.000000   0.047000 (  0.045426)
