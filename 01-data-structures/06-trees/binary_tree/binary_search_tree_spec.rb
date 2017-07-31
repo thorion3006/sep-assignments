@@ -140,6 +140,21 @@ RSpec.describe BinarySearchTree, type: Class do
       tree.delete(root, mad_max_2.title)
       expect(tree.find(root, mad_max_2.title)).to be_nil
     end
+
+    it "properly deletes a node containing two child nodes" do
+      tree.insert(root, hope)
+      tree.insert(root, empire)
+      tree.insert(root, jedi)
+      tree.insert(root, martian)
+      tree.insert(root, pacific_rim)
+      tree.insert(root, inception)
+      tree.insert(root, braveheart)
+      tree.insert(root, shawshank)
+      tree.insert(root, district)
+      tree.insert(root, mad_max_2)
+      tree.delete(root, hope.title)
+      expect(tree.find(root, hope.title)).to be_nil
+    end
   end
 
   describe "#printf" do
@@ -172,5 +187,21 @@ RSpec.describe BinarySearchTree, type: Class do
        tree.insert(root, hope)
        expect { tree.printf }.to output(expected_output).to_stdout
      }
+  end
+
+  describe '#left_leaf' do
+    it 'Returns the left left node' do
+      tree.insert(root, hope)
+      tree.insert(root, empire)
+      tree.insert(root, jedi)
+      tree.insert(root, martian)
+      tree.insert(root, pacific_rim)
+      tree.insert(root, inception)
+      tree.insert(root, braveheart)
+      tree.insert(root, shawshank)
+      tree.insert(root, district)
+      tree.insert(root, mad_max_2)
+      expect(tree.left_leaf(root)).to eq pacific_rim
+    end
   end
 end
