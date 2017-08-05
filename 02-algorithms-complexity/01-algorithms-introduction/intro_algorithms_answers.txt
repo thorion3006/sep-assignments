@@ -1,0 +1,25 @@
+Calculating a tip:
+1. Get the total amount due form the bill;
+2. Multiply 0.2 with the total amount due;
+3. The resulting number is the tip.
+
+Getting to work:
+1. Get the car keys;
+2. Open the car;
+3. Get in;
+4. Start the engine;
+5. Shift the gear to drive;
+6. Drive to office;
+7. Park the car in the allotted parking;
+8. Get out;
+9. Lock the car;
+10. You have reached your office.
+
+Determining what to wear:
+1. Select a shirt from the wardrobe;
+2. Check if it was worn the previous day;
+3. If yes, return and go to step 1;
+4. Otherwise choose a pant from the wardrobe;
+5. Check if it matches the shirt;
+6. If not, return and go to step 4;
+7. Otherwise wear them.
