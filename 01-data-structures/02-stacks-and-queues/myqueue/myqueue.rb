@@ -4,13 +4,13 @@ class MyQueue
 
   def initialize
     @queue = []
-    @head = @queue.first
-    @tail = @queue.last
+    @head = nil
+    @tail = nil
   end
 
   def enqueue(element)
-    @queue[@queue.length] = element
-    @head = @queue.first
+    @queue << element
+    @head ||= @queue.first
     @tail = @queue.last
   end
 
