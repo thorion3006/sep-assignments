@@ -1,0 +1,33 @@
+1. It would take 7 iterations to find the value 'G' using linear search.
+
+2. It would take 3 iterations to find the value 'G' using binary search.
+
+3. fib(10):
+    fib(10) = fib(9) + fib(8) = 34 + 21 = 55
+    fib(9) = fib(8) + fib(7) = 21 + 13 = 34
+    fib(8) = fib(7) + fib(6) = 13 + 8 = 21
+    fib(7) = fib(6) + fib(5) = 8 + 5 = 13
+    fib(6) = fib(5) + fib(4) = 5 + 3 = 8
+    fib(5) = fib(4) + fib(3) = 3 + 2 = 5
+    fib(4) = fib(3) + fib(2) = 2 + 1 = 3
+    fib(3) = fib(2) + 1 = 1 + 1 = 2
+    fib(2) = 1 + 0 = 1
+
+    fib(11):
+    fib(11) = fib(10) + fib(9) = 55 + 34 = 89
+
+    fib(12):
+    fib(12) = fib(11) + fib(10) = 89 + 55 = 144
+
+iterative vs recursive benchmark:
+Iterative fib(20):
+0.000000   0.000000   0.000000 (  0.000005)
+Recursive fib(20):
+0.000000   0.000000   0.000000 (  0.001206)
+
+1. I would choose an iterative linear search because binary search cannot be used
+in an unsorted collection.
+
+2. I would choose an iterative binary search because it would find any item in under
+20 iterations whereas linear search might take up to 1000000 iterations. I would use
+iterative over recursive because recursive has to make a method call at every iteration.
