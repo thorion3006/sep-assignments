@@ -1,0 +1,23 @@
+1. An algorithm that has O(1) is a quantum computer whereas an algorithm with O(2^n) is an abacus.
+
+2. In a binary search the best case scenario happens when the query item is found in the middle of the array.
+
+3. In binary search the worst case scenario happens when the query item is present in either ends of the array.
+
+4. The bounded case scenario is when the query item is present in an index other than the middle or the ends of the array.
+
+6. Infinity
+
+7. O(nln(n))
+
+8.  def linear_iteration(n)
+      N = 0
+      n.times { N += 1 }
+      puts N
+    end
+
+9. O(log n)
+
+10. Big-omega(1)
+
+11. Bi-theta(log n)
