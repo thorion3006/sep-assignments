@@ -1,0 +1,11 @@
+1. O(1) because the method doesnt have any iterations
+
+2. O(n) because the number of iterations increase linearly with n.
+
+3. O(n*m) because the number of iterations increase linearly with the total number of elements in the array.
+
+4. O(2^n) because each level in the recursion will have 2^level child nodes and there will be n-1 levels.
+
+5. O(n) because the number of iterations increase linearly with n
+
+6. O(n^2) it happens on a already sorted array as the pivot will always be min.
